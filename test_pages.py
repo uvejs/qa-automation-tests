@@ -9,7 +9,7 @@ class TestHomeScreen:
     @pytest.fixture(scope="class")
     def browser_and_page(self):
         with sync_playwright() as p:
-            browser = p.chromium.launch(channel="chrome", headless=False)
+            browser = p.chromium.launch(channel="chrome")
             page = browser.new_page()
             page.set_viewport_size({'width': 1920, 'height': 1080})
             yield browser, page
