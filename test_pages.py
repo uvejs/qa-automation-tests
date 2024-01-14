@@ -15,7 +15,7 @@ class TestHomeScreen:
             yield browser, page
             browser.close()
 
-    @pytest.mark.order(1)
+    @pytest.mark.order(100)
     def test_HomePage(self, browser_and_page):
         browser, page = browser_and_page
         page.goto(self.baseURL)
@@ -41,7 +41,7 @@ class TestHomeScreen:
             assert False
 
 
-    @pytest.mark.order(2)
+    @pytest.mark.order(1001)
     def test_Metal_Carports(self, browser_and_page):
         browser, page = browser_and_page
         page.goto(self.baseURL + "carports/")
@@ -61,7 +61,7 @@ class TestHomeScreen:
             assert False
 
 
-    @pytest.mark.order(3)
+    @pytest.mark.order(1003)
     def test_Price_Your_Carport(self, browser_and_page):
         browser, page = browser_and_page
         page.goto(self.baseURL + "products/carports/")
@@ -101,7 +101,7 @@ class TestHomeScreen:
             assert False
 
 
-    @pytest.mark.order(4)
+    @pytest.mark.order(1004)
     def test_Carport_Cost(self, browser_and_page):
         browser, page = browser_and_page
         page.goto(self.baseURL + "metal-carport-prices/")
@@ -140,7 +140,7 @@ class TestHomeScreen:
             allure.attach(page.screenshot(), name="table3", attachment_type=allure.attachment_type.PNG)
             assert False
 
-    @pytest.mark.order(5)
+    @pytest.mark.order(1005)
     def test_Pricing_Guides(self, browser_and_page):
         browser, page = browser_and_page
         page.goto(self.baseURL + "pricing-guides/")

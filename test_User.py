@@ -13,7 +13,7 @@ class TestUser:
             yield browser
             browser.close()
 
-    @pytest.mark.order(1003)
+    @pytest.mark.order(10003)
     def test_Register(self, browser):
         page = browser.new_page()
         page.goto("https://alansfactoryoutlet.com/my-account/")
@@ -43,7 +43,7 @@ class TestUser:
             assert False
 
 
-    @pytest.mark.order(1004)
+    @pytest.mark.order(10004)
     def test_Login(self, browser):
         page = browser.new_page()
         page.goto("https://alansfactoryoutlet.com/my-account/")
