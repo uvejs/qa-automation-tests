@@ -148,4 +148,4 @@ class TestHomeScreen:
         pageTitlePricing_Guides = page.locator("#h-easily-price-a-carport-and-metal-garage").text_content()
         if pageTitlePricing_Guides != "Easily Price a Carport and Metal Garage":
             allure.attach(page.screenshot(), name="pageTitlePricing_Guides", attachment_type=allure.attachment_type.PNG)
-            assert False
+            assert False, "Easily Price a Carport and Metal Garage text is not good"
